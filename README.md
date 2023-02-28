@@ -80,15 +80,22 @@ Duckdb
 
 ----- 
 
-DuckDB is a relational (table oriented) database management system, designed to support analytical query workloads, which are characterised by complex, long-running queries that process significant portions of large-scale datasets.  Examples of these queries are aggregations over entire tables or joins between several large tables – resulting in large-scale changes to the data, with large portions of tables being changed, added or appended at the same time.  
+DuckDB is a relational (table oriented) database management system, designed to support analytical (OLAP) query workloads, which are characterised by complex, long-running queries that process significant portions of large-scale datasets.  Examples of these queries are aggregations over entire tables or joins between several large tables – resulting in large-scale changes to the data, with large portions of tables being changed, added or appended at the same time.  
 
+ 
+
+For such operations on large datasets, it is imperative to reduce the amount of CPU cycles that are expended per individual value. To achieve this, DuckDB contains a columnar-vectorised query execution engine, where queries can be interpreted as a large batch of values (a “vector”) processed in one operation. This greatly reduces the overhead that is present systems which process each row sequentially, such as PostgreSQL, MySQL or SQLite – resulting in far better performance in online analytical processing queries.  
+
+DuckDB is free, open source, has no external dependencies and is easily integrated into other build processes with a simplified deployment process: The entire source tree of DuckDB is compiled into two files, a header and an implementation file. The installation of DuckDB into Python couldn’t be more simple: 
+ 
+*pip install duckdb* 
+
+DuckDB runs completely embedded within a host process, allowing for high-speed data transfer to and from the database. This allows DuckDB to process foreign data without copying, for example in the DuckDB Python package, that can run queries directly on Pandas data without ever copying or importing any of the data.  
+
+The data ingest was handled by pyarrow – utilising the pyarrow.dataset functionality to efficiently work with larger than memory datasets.  
+
+SQL was voted the third most popular programming language in the 2022 stack Overflow developer survey, which shows the resilience of the language considering it was developed in the 70s. DuckDB has SQL integration, which can be easily used to query the database once a connection is set up using the connect function – by default as an in-memory database, duckdb.connect(), once the dataset has been loaded using pyarrow.dataset. 
  
-
-For such operations on large datasets, it is imperative to reduce the amount of CPU cycles that are expended per individual value. To achieve this, DuckDB contains a columnar-vectorised query execution engine, where queries can be interpreted as a large batch of values (a “vector”) processed in one operation. This greatly reduces the overhead that is present systems which process each row sequentially, such as PostgreSQL, MySQL or SQLite – resulting in far better performance in online analytical processing queries.  
-
-DuckDB has no external dependencies and is easily integrated into other build processes with a simplified deployment process: The entire source tree of DuckDB is compiled into two files, a header and an implementation file.   
-
-DuckDB runs completely embedded within a host process, allowing for high speed  
 
   
 
