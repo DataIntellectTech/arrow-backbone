@@ -14256,10 +14256,10 @@ a.anchor-link {
     </script>
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pyarrow.dataset</span> <span class="k">as</span> <span class="nn">ds</span>
@@ -14274,35 +14274,13 @@ a.anchor-link {
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/home/aharte/virtual/lib/python3.10/site-packages/pandas/compat/__init__.py:124: UserWarning: Could not import the lzma module. Your installed Python is incomplete. Attempting to use lzma compression will result in a RuntimeError.
-  warnings.warn(msg)
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span>  <span class="n">ds</span><span class="o">.</span><span class="n">dataset</span><span class="p">(</span><span class="s2">&quot;~/internal/data/trade_taq2019.arrow&quot;</span><span class="p">,</span> <span class="nb">format</span> <span class="o">=</span> <span class="s2">&quot;arrow&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">dataset</span><span class="p">(</span><span class="s2">&quot;~/internal/data/trade_taq2019.arrow&quot;</span><span class="p">,</span> <span class="nb">format</span> <span class="o">=</span> <span class="s2">&quot;arrow&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14310,10 +14288,10 @@ a.anchor-link {
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">window</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
@@ -14337,8 +14315,6 @@ a.anchor-link {
 
 <span class="n">result</span><span class="o">=</span><span class="n">query</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
 <span class="n">result</span>
-
-<span class="o">%</span><span class="k">timeit</span> %memit
 </pre></div>
 
      </div>
@@ -14346,41 +14322,10 @@ a.anchor-link {
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>data into scan...
-running window query...
-peak memory: 4668.07 MiB, increment: 0.00 MiB
-peak memory: 4633.32 MiB, increment: -26.45 MiB
-peak memory: 4047.43 MiB, increment: -347.94 MiB
-peak memory: 2127.42 MiB, increment: -728.03 MiB
-peak memory: 1202.44 MiB, increment: -92.51 MiB
-peak memory: 1186.02 MiB, increment: 0.00 MiB
-peak memory: 1186.06 MiB, increment: 0.00 MiB
-peak memory: 1186.06 MiB, increment: 0.00 MiB
-313 ms ± 64.6 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">agg</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
@@ -14404,7 +14349,6 @@ peak memory: 1186.06 MiB, increment: 0.00 MiB
 <span class="n">query</span> <span class="o">=</span> <span class="n">agg</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
 <span class="n">result</span>
-<span class="o">%</span><span class="k">timeit</span> %memit 
 </pre></div>
 
      </div>
@@ -14412,41 +14356,10 @@ peak memory: 1186.06 MiB, increment: 0.00 MiB
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Sorting on time first...
-running query now
-peak memory: 1284.57 MiB, increment: -45.26 MiB
-peak memory: 1284.58 MiB, increment: 0.00 MiB
-peak memory: 1284.58 MiB, increment: 0.00 MiB
-peak memory: 1284.58 MiB, increment: 0.00 MiB
-peak memory: 1284.58 MiB, increment: 0.00 MiB
-peak memory: 1284.58 MiB, increment: 0.00 MiB
-peak memory: 1284.58 MiB, increment: 0.00 MiB
-peak memory: 1284.58 MiB, increment: 0.00 MiB
-272 ms ± 4.04 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">newagg</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
@@ -14465,7 +14378,6 @@ peak memory: 1284.58 MiB, increment: 0.00 MiB
 <span class="n">query</span> <span class="o">=</span> <span class="n">newagg</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
 <span class="n">result</span>
-<span class="o">%</span><span class="k">timeit</span> %memit 
 </pre></div>
 
      </div>
@@ -14473,40 +14385,10 @@ peak memory: 1284.58 MiB, increment: 0.00 MiB
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>running query...
-peak memory: 2062.24 MiB, increment: -122.69 MiB
-peak memory: 1720.03 MiB, increment: -157.34 MiB
-peak memory: 1581.11 MiB, increment: -58.12 MiB
-peak memory: 1466.73 MiB, increment: -11.58 MiB
-peak memory: 1462.02 MiB, increment: 0.00 MiB
-peak memory: 1462.02 MiB, increment: 0.00 MiB
-peak memory: 1460.13 MiB, increment: 0.00 MiB
-peak memory: 1455.33 MiB, increment: -4.80 MiB
-279 ms ± 13.8 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#data ingest of the bigger datset</span>
@@ -14518,10 +14400,10 @@ peak memory: 1455.33 MiB, increment: -4.80 MiB
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">bagg</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
@@ -14545,54 +14427,6 @@ peak memory: 1455.33 MiB, increment: -4.80 MiB
 <span class="n">query</span> <span class="o">=</span> <span class="n">bagg</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
 <span class="n">result</span>
-
-
-<span class="o">%</span><span class="k">timeit</span> %memit
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>sorting on time
-running big query
-peak memory: 1475.67 MiB, increment: 0.00 MiB
-peak memory: 1475.67 MiB, increment: 0.00 MiB
-peak memory: 1475.67 MiB, increment: 0.00 MiB
-peak memory: 1475.67 MiB, increment: 0.00 MiB
-peak memory: 1475.67 MiB, increment: 0.00 MiB
-peak memory: 1475.68 MiB, increment: 0.00 MiB
-peak memory: 1475.68 MiB, increment: 0.00 MiB
-peak memory: 1475.68 MiB, increment: 0.00 MiB
-289 ms ± 7.57 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
      </div>
