@@ -14296,12 +14296,10 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">trade</span><span class="p">[(</span><span class="n">trade</span><span class="p">[</span><span class="s1">&#39;Symbol&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;AAPL&#39;</span><span class="p">)</span> <span class="o">&amp;</span> 
-      <span class="p">(</span><span class="n">trade</span><span class="p">[</span><span class="s1">&#39;Sale_Condition&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;O&#39;</span><span class="p">))</span> <span class="o">&amp;</span> 
-      <span class="p">(</span><span class="n">trade</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">&#39;2019-10-07 09:30&#39;</span><span class="p">))</span> <span class="o">&amp;</span> 
-      <span class="p">(</span><span class="n">trade</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">&#39;2019-10-07 16:00&#39;</span><span class="p">))]</span>
-
-<span class="n">result</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">trade</span><span class="p">[(</span><span class="n">trade</span><span class="p">[</span><span class="s1">&#39;Symbol&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;AAPL&#39;</span><span class="p">)</span> <span class="o">&amp;</span> 
+    <span class="p">(</span><span class="n">trade</span><span class="p">[</span><span class="s1">&#39;Sale_Condition&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;O&#39;</span><span class="p">))</span> <span class="o">&amp;</span> 
+    <span class="p">(</span><span class="n">trade</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">&#39;2019-10-07 09:30&#39;</span><span class="p">))</span> <span class="o">&amp;</span> 
+    <span class="p">(</span><span class="n">trade</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">&#39;2019-10-07 16:00&#39;</span><span class="p">))]</span>
 </pre></div>
 
      </div>
@@ -14315,10 +14313,8 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">trade</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="p">[</span><span class="n">trade</span><span class="o">.</span><span class="n">Symbol</span><span class="p">,</span><span class="n">vaex</span><span class="o">.</span><span class="n">BinnerTime</span><span class="p">(</span><span class="n">quote</span><span class="o">.</span><span class="n">Time</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">)],</span>
-              <span class="n">agg</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Total_vol&quot;</span><span class="p">:</span> <span class="n">vaex</span><span class="o">.</span><span class="n">agg</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s2">&quot;Trade_Volume&quot;</span><span class="p">)})</span>
-
-<span class="n">result</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">trade</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="p">[</span><span class="n">trade</span><span class="o">.</span><span class="n">Symbol</span><span class="p">,</span><span class="n">vaex</span><span class="o">.</span><span class="n">BinnerTime</span><span class="p">(</span><span class="n">quote</span><span class="o">.</span><span class="n">Time</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">)],</span>
+    <span class="n">agg</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Total_vol&quot;</span><span class="p">:</span> <span class="n">vaex</span><span class="o">.</span><span class="n">agg</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s2">&quot;Trade_Volume&quot;</span><span class="p">)})</span>
 </pre></div>
 
      </div>
@@ -14332,10 +14328,8 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">quote</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="p">[</span><span class="n">quote</span><span class="o">.</span><span class="n">Symbol</span><span class="p">,</span><span class="n">vaex</span><span class="o">.</span><span class="n">BinnerTime</span><span class="p">(</span><span class="n">quote</span><span class="o">.</span><span class="n">Time</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">)],</span>
-              <span class="n">agg</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;mid&#39;</span><span class="p">:</span> <span class="n">vaex</span><span class="o">.</span><span class="n">agg</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;Offer_Price+Bid_Price/2&#39;</span><span class="p">)})</span>
-
-<span class="n">result</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">quote</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="p">[</span><span class="n">quote</span><span class="o">.</span><span class="n">Symbol</span><span class="p">,</span><span class="n">vaex</span><span class="o">.</span><span class="n">BinnerTime</span><span class="p">(</span><span class="n">quote</span><span class="o">.</span><span class="n">Time</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">)],</span>
+    <span class="n">agg</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;mid&#39;</span><span class="p">:</span> <span class="n">vaex</span><span class="o">.</span><span class="n">agg</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;Offer_Price+Bid_Price/2&#39;</span><span class="p">)})</span>
 </pre></div>
 
      </div>
