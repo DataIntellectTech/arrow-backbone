@@ -82,3 +82,17 @@ trade = trade.sort("Time")
 trade.groupby_dynamic("query").collect
 ```
 Vaex
+---
+
+Vaex is an open source DataFrame library in python with incredible processing power, without loading the entire dataset into memory. Vaex shares some similar advantages to Polars including “Out of Core” processing, however they work differently. Vaex’s method of “Out of Core” analysis is memory mapping files, for example parquet or csv files first need to be read and converted into a file format that can be memory mapped - this is great for operating such as filters or aggregrations, however operations that need a full data shuffle, such as sorts, don’t have a great performance on memory mapped data. Polars however tackles “Out of Core” processing differently, as it does not rely on memory mapping, but on streaming the data in batches (and spiling to disk if needed) which gives control to which data is held in memory.
+
+The vaex.open method can be used to read an arrow or CSV file. If it is reading a CSV file, this method allows Vaex to ‘lazily’ read the CSV file (i.e the data from the CSV file will be streamed when computations need to be executed, which is all powered by Apache Arrow under the hood. This allows you to work with large CSV files without having to care about the RAM!). When opening a CSV file this way, Vaex will do a quick scan on the file to determine some basic metadata such as the number of rows, column names and their data types:
+```
+trade = vaex.open("~/file_path")
+quote = vaex.open("~/file_path")
+```
+Vaex query syntax is very similar to Polars, both having a strong resemblance to pandas syntax. When doing a filter query, the syntax is extremely similar, except instead of using a .filter keyword, square brackets are used instead. For an aggregration opertation, a .groupby keyword is used. When experimenting with a time binning operation, we found that binning on a one minute time bucket would break the whole method, and there was very little documentation online to help - however binning on one hour intervals works okay, so likely this is something that will be patched in the future:
+```
+trade[query]
+trade.groupby(query)
+```
